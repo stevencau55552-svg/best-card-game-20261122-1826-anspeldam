@@ -1,6 +1,8 @@
 # Ember Sigil Duel
 
-[![Bounty: Make the best card game](https://img.shields.io/badge/bounty-best--card--game--20261122--1826-gold)](https://make.fun/bounty/best-card-game-20261122-1826)
+[![make.fun · best-card-game-20261122-1826](https://make.fun/badge/best-card-game-20261122-1826.svg)](https://make.fun/bounty/best-card-game-20261122-1826?utm_source=github&utm_medium=readme&utm_campaign=best-card-game-20261122-1826)
+[![rank](https://make.fun/badge/best-card-game-20261122-1826/stevencau55552-svg/best-card-game-20261122-1826-anspeldam/rank.svg)](https://make.fun/bounty/best-card-game-20261122-1826/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=best-card-game-20261122-1826)
+[![reward](https://make.fun/badge/best-card-game-20261122-1826/stevencau55552-svg/best-card-game-20261122-1826-anspeldam/reward.svg)](https://make.fun/bounty/best-card-game-20261122-1826?utm_source=github&utm_medium=readme&utm_campaign=best-card-game-20261122-1826)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Status: Playable offline](https://img.shields.io/badge/status-playable%20offline-brightgreen)](game/index.html)
 
