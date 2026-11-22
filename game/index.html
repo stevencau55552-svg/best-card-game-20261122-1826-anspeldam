@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ember Sigil Duel — a card duel of four elements</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ============ TITLE SCREEN ============ -->
+  <section id="title-screen" class="screen">
+    <div class="title SigilGlow">
+      <div class="title-kicker">A DUEL OF FOUR ELEMENTS</div>
+      <h1>EMBER<br>SIGIL DUEL</h1>
+      <div class="title-gems" aria-hidden="true">
+        <span class="gem ember">◆</span><span class="gem tide">●</span><span class="gem grove">▲</span><span class="gem storm">✦</span>
+      </div>
+      <p class="title-tag">Outwit Vex, the Cinder Imp. Spend mana, summon sigil creatures,
+      and break the enemy's 30 life before yours falls.</p>
+      <button id="btn-start" class="big-btn" type="button">BEGIN THE DUEL</button>
+      <div class="title-rules">
+        <div><b>HOW TO PLAY</b></div>
+        <div>Each turn you draw a card and gain mana (1 → 10).</div>
+        <div>Click a card in your hand to play it. Spells need a target — click the spell, then its target.</div>
+        <div>Creatures fight at the end of every round: each one strikes the creature opposite it, or the hero if the slot is empty.</div>
+        <div>Elements matter: <span class="el ember">◆ Ember</span> beats <span class="el grove">▲ Grove</span>,
+        <span class="el grove">▲ Grove</span> beats <span class="el tide">● Tide</span>,
+        <span class="el tide">● Tide</span> beats <span class="el ember">◆ Ember</span> — a winning strike deals +1 damage.
+        <span class="el storm">✦ Storm</span> fears nothing and bows to nothing.</div>
+        <div>Keys: <b>1–7</b> select a hand card · <b>Enter</b> end turn · <b>Esc</b> back to title.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TABLE SCREEN ============ -->
+  <section id="table-screen" class="screen hidden">
+    <header id="topbar">
+      <div class="hero-box enemy-hero" id="enemy-hero">
+        <span class="hero-name">VEX · Cinder Imp</span>
+        <span class="hero-life" id="enemy-life">♥ 30</span>
+      </div>
+      <div id="turn-banner">
+        <div id="round-label">ROUND 1</div>
+        <div id="phase-label">Your turn — play cards, then end turn</div>
+      </div>
+      <div class="hero-box player-hero" id="player-hero">
+        <span class="hero-name">ASHA · Ember Warden</span>
+        <span class="hero-life" id="player-life">♥ 30</span>
+      </div>
+    </header>
+
+    <div id="table-wrap">
+      <div id="enemy-side" class="side">
+        <div id="enemy-hand" class="hand enemy-hand" aria-label="Opponent hand"></div>
+        <div id="enemy-board" class="board" aria-label="Opponent board"></div>
+      </div>
+
+      <div id="midline">
+        <div id="mana-bar" aria-label="Mana"></div>
+        <div id="deck-counts">
+          <span id="player-deck">Your deck: 26</span>
+          <span id="enemy-deck">Vex deck: 26</span>
+        </div>
+        <button id="btn-end-turn" class="big-btn" type="button">END TURN ⏎</button>
+      </div>
+
+      <div id="player-side" class="side">
+        <div id="player-board" class="board" aria-label="Your board"></div>
+        <div id="player-hand" class="hand player-hand" aria-label="Your hand"></div>
+      </div>
+
+      <aside id="log-panel">
+        <div class="log-title">DUEL LOG</div>
+        <ol id="log"></ol>
+      </aside>
+    </div>
+
+    <div id="target-hint" class="hidden">Choose a target for <b id="target-spell-name"></b> — click a creature or a hero. <button id="btn-cancel-target" type="button">Cancel</button></div>
+  </section>
+
+  <!-- ============ END SCREEN ============ -->
+  <section id="end-screen" class="screen hidden">
+    <div class="end-card">
+      <div id="end-kicker" class="end-kicker">THE DUEL IS OVER</div>
+      <h2 id="end-title">VICTORY</h2>
+      <p id="end-detail"></p>
+      <div id="end-stats"></div>
+      <button id="btn-again" class="big-btn" type="button">DUEL AGAIN</button>
+      <button id="btn-title" class="ghost-btn" type="button">Back to title</button>
+    </div>
+  </section>
+
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
